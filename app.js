@@ -25,6 +25,8 @@ app.use(express.json());
 //! API endpoints
 //? user api 
 app.use('/api/meme', meme_api);
-
+app.get('/', (req, res) =>{
+    res.status(200).send("Welcome to Meme Gallery App");
+})
 
 module.exports = app;
